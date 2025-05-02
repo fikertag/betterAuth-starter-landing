@@ -4,7 +4,6 @@ import {
   ShieldCheck,
   LockKeyhole,
   Zap,
-  Users,
   Mail,
   Fingerprint,
   Key,
