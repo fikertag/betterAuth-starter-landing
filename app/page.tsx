@@ -81,9 +81,6 @@ export default function Home() {
               <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
               <div className="w-3 h-3 rounded-full bg-green-500"></div>
             </div>
-            <div className="text-sm text-gray-500 dark:text-gray-400 mx-auto">
-              betterauth-mongodb-starter.vercel.app/admin
-            </div>
           </div>
 
           <div className="relative bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
@@ -100,7 +97,7 @@ export default function Home() {
         </div>
 
         {/* Key Features Section */}
-        <div className="mt-16 space-y-12">
+        <section id="features" className="mt-16 space-y-12">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
             Key Features
           </h2>
@@ -170,7 +167,7 @@ export default function Home() {
               description="Fully responsive navbar with theme switching"
             />
           </div>
-        </div>
+        </section>
 
         {/* Additional Screenshot Section */}
         <div className="mt-16 space-y-6">
@@ -192,14 +189,14 @@ export default function Home() {
                 <picture>
                   <source
                     media="(max-width: 640px)"
-                    srcSet="/signup-mobile.png"
+                    srcSet="/signup-deskto.png"
                   />
                   <source
                     media="(max-width: 1000px)"
-                    srcSet="/signup-tablet.png"
+                    srcSet="/signup-deskto.png"
                   />
                   <img
-                    src="/signup-desktop.png"
+                    src="/signup-deskto.png"
                     alt="Signup Page"
                     className="object-contain w-full h-full"
                   />
@@ -220,14 +217,14 @@ export default function Home() {
                 <picture>
                   <source
                     media="(max-width: 640px)"
-                    srcSet="/signup-mobile.png"
+                    srcSet="/chat-desktop.png"
                   />
                   <source
                     media="(max-width: 1000px)"
-                    srcSet="/signup-tablet.png"
+                    srcSet="/chat-desktop.png"
                   />
                   <img
-                    src="/signup-desktop.png"
+                    src="/chat-desktop.png"
                     alt="Signup Page"
                     className="object-contain w-full h-full"
                   />
@@ -238,7 +235,10 @@ export default function Home() {
         </div>
 
         {/* Tech Stack Section */}
-        <div className="mt-20 py-12 border-t border-gray-200 dark:border-gray-800">
+        <div
+          id="tech"
+          className="mt-20 py-12 border-t border-gray-200 dark:border-gray-800"
+        >
           <div className="max-w-4xl mx-auto px-4 sm:px-6">
             <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 text-center mb-8">
               POWERED BY
