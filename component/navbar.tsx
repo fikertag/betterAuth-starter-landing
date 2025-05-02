@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,6 +11,16 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Mobile menu button */}
+
+          {/* Brand logo/name */}
+          <div className="flex items-center space-x-2">
+            <Link
+              href="/"
+              className="text-xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
+            >
+              BetterAuth starter
+            </Link>
+          </div>
           <div className="flex md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -24,23 +34,10 @@ export default function Navbar() {
               )}
             </button>
           </div>
-
-          {/* Brand logo/name */}
-          <div className="flex items-center space-x-2">
-            <Zap className="h-6 w-6 text-blue-600 dark:text-blue-400" />
-            <Link
-              href="/"
-              className="text-xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
-            >
-              BetterAuth
-            </Link>
-          </div>
-
           {/* Desktop navigation */}
           <div className="hidden md:flex items-center space-x-6">
             <NavLink href="#features">Features</NavLink>
-            <NavLink href="#security">Security</NavLink>
-            <NavLink href="#demo">Demo</NavLink>
+            <NavLink href="#contact">Get source code</NavLink>
             <NavLink href="#tech">Tech Stack</NavLink>
           </div>
 
@@ -48,6 +45,7 @@ export default function Navbar() {
           <div className="hidden md:block">
             <Link
               href="https://betterauth-mongodb-starter.vercel.app"
+              target="_blank"
               className="px-4 py-2 rounded-md bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-sm hover:shadow-md"
             >
               Live Demo
@@ -63,18 +61,16 @@ export default function Navbar() {
             <MobileNavLink href="#features" onClick={() => setIsOpen(false)}>
               Features
             </MobileNavLink>
-            <MobileNavLink href="#security" onClick={() => setIsOpen(false)}>
-              Security
-            </MobileNavLink>
-            <MobileNavLink href="#demo" onClick={() => setIsOpen(false)}>
-              Demo
-            </MobileNavLink>
             <MobileNavLink href="#tech" onClick={() => setIsOpen(false)}>
               Tech Stack
+            </MobileNavLink>
+            <MobileNavLink href="#contact" onClick={() => setIsOpen(false)}>
+              Get source code
             </MobileNavLink>
             <div className="mt-3">
               <Link
                 href="https://betterauth-mongodb-starter.vercel.app"
+                target="_blank"
                 className="flex items-center justify-center px-4 py-2 rounded-md bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
                 onClick={() => setIsOpen(false)}
               >
