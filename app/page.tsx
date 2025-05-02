@@ -251,6 +251,26 @@ export default function Home() {
                 }
               />
               <TechIcon
+                name="Better Auth"
+                icon={
+                  <svg
+                    width="60"
+                    height="45"
+                    viewBox="0 0 60 45"
+                    fill="none"
+                    className="w-8 h-8"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M0 0H15V15H30V30H15V45H0V30V15V0ZM45 30V15H30V0H45H60V15V30V45H45H30V30H45Z"
+                      className="dark:fill-white"
+                    ></path>
+                  </svg>
+                }
+              />
+              <TechIcon
                 name="MongoDB"
                 icon={
                   <SiMongodb className="w-10 h-10 text-green-600 dark:text-green-400" />
@@ -284,26 +304,7 @@ export default function Home() {
                   <SiPusher className="w-10 h-10 text-cyan-600 dark:text-cyan-400" />
                 }
               />
-              <TechIcon
-                name="Better Auth"
-                icon={
-                  <svg
-                    width="60"
-                    height="45"
-                    viewBox="0 0 60 45"
-                    fill="none"
-                    className="w-8 h-8"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M0 0H15V15H30V30H15V45H0V30V15V0ZM45 30V15H30V0H45H60V15V30V45H45H30V30H45Z"
-                      className="dark:fill-white"
-                    ></path>
-                  </svg>
-                }
-              />
+
               <TechIcon
                 name="Cloudinary"
                 icon={
