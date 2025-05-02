@@ -15,35 +15,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
       <div className="px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
-          {/* Product Links */}
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-              <Zap className="w-5 h-5 mr-2 text-blue-600 dark:text-blue-400" />
-              Product
-            </h3>
-            <nav className="space-y-2">
-              <FooterLink href="/features">Features</FooterLink>
-              <FooterLink href="/security">Security</FooterLink>
-              <FooterLink href="/pricing">Pricing</FooterLink>
-              <FooterLink href="/demo">Demo</FooterLink>
-            </nav>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-              <Code className="w-5 h-5 mr-2 text-purple-600 dark:text-purple-400" />
-              Resources
-            </h3>
-            <nav className="space-y-2">
-              <FooterLink href="/docs">Documentation</FooterLink>
-              <FooterLink href="/guides">Guides</FooterLink>
-              <FooterLink href="/blog">Blog</FooterLink>
-              <FooterLink href="/support">Support</FooterLink>
-            </nav>
-          </div>
-
+        <div className="grid grid-cols-1 md:grid-cols-2 place-items-center gap-8 max-w-7xl mx-auto">
           {/* Contact Info */}
           <div>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
@@ -77,16 +49,11 @@ export default function Footer() {
               Company
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4">
-              The complete authentication solution for modern applications.
+              The complete authentication starting kit for modern applications.
             </p>
             <div className="text-gray-500 dark:text-gray-400 text-sm">
-              <p>© {new Date().getFullYear()} BetterAuth Inc.</p>
+              <p>© {new Date().getFullYear()} fikiryilkal</p>
               <p className="mt-1">All rights reserved.</p>
-              <div className="mt-4 space-x-4">
-                <FooterLink href="/privacy">Privacy</FooterLink>
-                <FooterLink href="/terms">Terms</FooterLink>
-                <FooterLink href="/cookies">Cookies</FooterLink>
-              </div>
             </div>
           </div>
         </div>

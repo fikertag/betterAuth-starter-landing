@@ -11,13 +11,20 @@ import {
   MoonStar,
   MessageSquare,
   LayoutDashboard,
-  Monitor,
-  Smartphone,
-  Server,
-  Database,
-  Code,
-  Terminal,
 } from "lucide-react";
+import {
+  SiNextdotjs,
+  SiMongodb,
+  SiTypescript,
+  SiTailwindcss,
+  SiPusher,
+  SiResend,
+  SiCloudinary,
+} from "react-icons/si";
+
+import { FaReact, FaKey } from "react-icons/fa";
+
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -46,17 +53,18 @@ export default function Home() {
           <div className="mt-10 space-y-6">
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
-                href="/auth/signup"
+                href="https://betterauth-mongodb-starter.vercel.app"
+                target="_blank"
                 className="relative overflow-hidden px-8 py-3.5 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium shadow-lg hover:shadow-xl transition-all duration-300 group inline-block text-center"
               >
-                <span className="relative z-10">Get Started</span>
+                <span className="relative z-10">Live Demo</span>
                 <span className="absolute inset-0 bg-gradient-to-r from-blue-700 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
               </Link>
               <Link
-                href="https://betterauth-mongodb-starter.vercel.app"
+                href="#contact"
                 className="relative overflow-hidden px-8 py-3.5 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white font-medium shadow-lg hover:shadow-xl transition-all duration-300 group inline-block text-center border border-gray-200 dark:border-gray-700"
               >
-                <span className="relative z-10">Live Demo</span>
+                <span className="relative z-10">Source code</span>
               </Link>
             </div>
             <p className="text-xs text-gray-500 dark:text-gray-400">
@@ -76,11 +84,18 @@ export default function Home() {
               <div className="w-3 h-3 rounded-full bg-green-500"></div>
             </div>
             <div className="text-sm text-gray-500 dark:text-gray-400 mx-auto">
-              app.betterauth.com
+              betterauth-mongodb-starter.vercel.app/admin
             </div>
           </div>
-          <div className="bg-gray-50 dark:bg-gray-900 h-64 flex items-center justify-center text-gray-400 dark:text-gray-600">
-            <Monitor className="w-16 h-16" />
+          <div className="relative bg-gray-50 dark:bg-gray-900 h-[850px]">
+            <Image
+              src="/admin.png"
+              alt="Admin Dashboard"
+              fill
+              className="object-cover"
+              quality={100}
+              priority
+            />
           </div>
         </div>
 
@@ -172,8 +187,15 @@ export default function Home() {
                   <div className="w-3 h-3 rounded-full bg-green-500"></div>
                 </div>
               </div>
-              <div className="bg-gray-50 dark:bg-gray-900 h-64 flex items-center justify-center text-gray-400 dark:text-gray-600">
-                <Smartphone className="w-16 h-16" />
+              <div className="relative bg-gray-50 dark:bg-gray-900 h-[350px]">
+                <Image
+                  src="/signup.png"
+                  alt="Admin Dashboard"
+                  fill
+                  className="object-contain"
+                  quality={100}
+                  priority
+                />
               </div>
             </div>
 
@@ -185,8 +207,15 @@ export default function Home() {
                   <div className="w-3 h-3 rounded-full bg-green-500"></div>
                 </div>
               </div>
-              <div className="bg-gray-50 dark:bg-gray-900 h-64 flex items-center justify-center text-gray-400 dark:text-gray-600">
-                <LayoutDashboard className="w-16 h-16" />
+              <div className="relative bg-gray-50 dark:bg-gray-900 h-[350px]">
+                <Image
+                  src="/welcome.png"
+                  alt="Admin Dashboard"
+                  fill
+                  className="object-contain"
+                  quality={100}
+                  priority
+                />
               </div>
             </div>
           </div>
@@ -202,31 +231,59 @@ export default function Home() {
               <TechIcon
                 name="Next.js"
                 icon={
-                  <Terminal className="w-10 h-10 text-gray-900 dark:text-gray-100" />
+                  <SiNextdotjs className="w-10 h-10 text-black dark:text-white" />
                 }
               />
               <TechIcon
                 name="MongoDB"
                 icon={
-                  <Database className="w-10 h-10 text-green-600 dark:text-green-400" />
+                  <SiMongodb className="w-10 h-10 text-green-600 dark:text-green-400" />
                 }
               />
               <TechIcon
                 name="TypeScript"
                 icon={
-                  <Code className="w-10 h-10 text-blue-600 dark:text-blue-400" />
-                }
-              />
-              <TechIcon
-                name="Node.js"
-                icon={
-                  <Server className="w-10 h-10 text-green-500 dark:text-green-300" />
+                  <SiTypescript className="w-10 h-10 text-blue-600 dark:text-blue-400" />
                 }
               />
               <TechIcon
                 name="Tailwind CSS"
                 icon={
-                  <Monitor className="w-10 h-10 text-blue-500 dark:text-blue-300" />
+                  <SiTailwindcss className="w-10 h-10 text-sky-500 dark:text-sky-300" />
+                }
+              />
+              <TechIcon
+                name="Resend"
+                icon={
+                  <SiResend className="w-10 h-10 text-red-600 dark:text-red-400" />
+                }
+              />
+              <TechIcon
+                name="shadcn/ui"
+                icon={
+                  <FaReact className="w-10 h-10 text-cyan-600 dark:text-cyan-400" />
+                }
+              />
+              <TechIcon
+                name="Pusher"
+                icon={
+                  <SiPusher className="w-10 h-10 text-cyan-600 dark:text-cyan-400" />
+                }
+              />
+              <TechIcon
+                name="Better Auth"
+                icon={<span className="text-3xl">🛡️</span>}
+              />
+              <TechIcon
+                name="Cloudinary"
+                icon={
+                  <SiCloudinary className="w-10 h-10 text-blue-500 dark:text-blue-300" />
+                }
+              />
+              <TechIcon
+                name="OAuth"
+                icon={
+                  <FaKey className="w-10 h-10 text-amber-600 dark:text-amber-400" />
                 }
               />
             </div>
