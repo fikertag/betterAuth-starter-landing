@@ -6,9 +6,9 @@ import {
   Github,
   HelpCircle,
   Shield,
-  MessageCircle,
   Linkedin,
 } from "lucide-react";
+import { SiDiscord, SiTelegram, SiX } from "react-icons/si";
 
 export default function Footer() {
   return (
@@ -26,43 +26,43 @@ export default function Footer() {
                 icon={
                   <Mail className="w-5 h-5 mr-2 mt-0.5 text-blue-600 dark:text-blue-400" />
                 }
-                label="hello@betterauth.com"
-                href="mailto:hello@betterauth.com"
+                label="fikeryilkaltages@gmail.com"
+                href="mailto:filkaltages@gmial.com"
               />
               <ContactItem
                 icon={
-                  <Twitter className="w-5 h-5 mr-2 mt-0.5 text-blue-400 dark:text-blue-300" />
+                  <SiX className="w-5 h-5 mr-2 mt-0.5 text-blue-400 dark:text-blue-300" />
                 }
-                label="@BetterAuth"
+                label="@fikiryilkal"
                 href="https://twitter.com/BetterAuth"
               />
               <ContactItem
                 icon={
                   <Github className="w-5 h-5 mr-2 mt-0.5 text-gray-800 dark:text-gray-200" />
                 }
-                label="github.com/betterauth"
+                label="github.com"
                 href="https://github.com/betterauth"
               />
               <ContactItem
                 icon={
-                  <MessageCircle className="w-5 h-5 mr-2 mt-0.5 text-sky-600 dark:text-sky-400" />
+                  <SiTelegram className="w-5 h-5 mr-2 mt-0.5 text-sky-600 dark:text-sky-400" />
                 }
                 label="Telegram"
-                href="https://t.me/betterauth"
+                href="https://t.me/fkrtag"
               />
               <ContactItem
                 icon={
-                  <MessageCircle className="w-5 h-5 mr-2 mt-0.5 text-indigo-600 dark:text-indigo-400" />
+                  <SiDiscord className="w-5 h-5 mr-2 mt-0.5 text-indigo-600 dark:text-indigo-400" />
                 }
                 label="Discord"
-                href="https://discord.gg/betterauth"
+                href="https://discord.gg/fikiryilkal"
               />
               <ContactItem
                 icon={
                   <Linkedin className="w-5 h-5 mr-2 mt-0.5 text-blue-700 dark:text-blue-500" />
                 }
                 label="LinkedIn"
-                href="https://linkedin.com/company/betterauth"
+                href="https://www.linkedin.com/in/fikiryilkal/"
               />
             </div>
           </div>

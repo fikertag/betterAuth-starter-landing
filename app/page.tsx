@@ -20,11 +20,9 @@ import {
   SiPusher,
   SiResend,
   SiCloudinary,
+  SiShadcnui,
+  SiAuth0,
 } from "react-icons/si";
-
-import { FaReact, FaKey } from "react-icons/fa";
-
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -87,15 +85,17 @@ export default function Home() {
               betterauth-mongodb-starter.vercel.app/admin
             </div>
           </div>
-          <div className="relative bg-gray-50 dark:bg-gray-900 h-[850px]">
-            <Image
-              src="/admin.png"
-              alt="Admin Dashboard"
-              fill
-              className="object-cover"
-              quality={100}
-              priority
-            />
+
+          <div className="relative bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
+            <picture>
+              <source media="(min-width: 640px)" srcSet="/admin-mobile.png" />
+              <source media="(max-width: 1280px)" srcSet="/admin-tablet.png" />
+              <img
+                src="/admin-desktop.png"
+                alt="Admin Dashboard"
+                className="object-contain w-full h-full"
+              />
+            </picture>
           </div>
         </div>
 
@@ -187,15 +187,23 @@ export default function Home() {
                   <div className="w-3 h-3 rounded-full bg-green-500"></div>
                 </div>
               </div>
-              <div className="relative bg-gray-50 dark:bg-gray-900 h-[350px]">
-                <Image
-                  src="/signup.png"
-                  alt="Admin Dashboard"
-                  fill
-                  className="object-contain"
-                  quality={100}
-                  priority
-                />
+
+              <div className="relative bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
+                <picture>
+                  <source
+                    media="(max-width: 640px)"
+                    srcSet="/signup-mobile.png"
+                  />
+                  <source
+                    media="(max-width: 1000px)"
+                    srcSet="/signup-tablet.png"
+                  />
+                  <img
+                    src="/signup-desktop.png"
+                    alt="Signup Page"
+                    className="object-contain w-full h-full"
+                  />
+                </picture>
               </div>
             </div>
 
@@ -207,15 +215,23 @@ export default function Home() {
                   <div className="w-3 h-3 rounded-full bg-green-500"></div>
                 </div>
               </div>
-              <div className="relative bg-gray-50 dark:bg-gray-900 h-[350px]">
-                <Image
-                  src="/welcome.png"
-                  alt="Admin Dashboard"
-                  fill
-                  className="object-contain"
-                  quality={100}
-                  priority
-                />
+
+              <div className="relative bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
+                <picture>
+                  <source
+                    media="(max-width: 640px)"
+                    srcSet="/signup-mobile.png"
+                  />
+                  <source
+                    media="(max-width: 1000px)"
+                    srcSet="/signup-tablet.png"
+                  />
+                  <img
+                    src="/signup-desktop.png"
+                    alt="Signup Page"
+                    className="object-contain w-full h-full"
+                  />
+                </picture>
               </div>
             </div>
           </div>
@@ -260,9 +276,7 @@ export default function Home() {
               />
               <TechIcon
                 name="shadcn/ui"
-                icon={
-                  <FaReact className="w-10 h-10 text-cyan-600 dark:text-cyan-400" />
-                }
+                icon={<SiShadcnui className="w-10 h-10 text-white" />}
               />
               <TechIcon
                 name="Pusher"
@@ -272,7 +286,23 @@ export default function Home() {
               />
               <TechIcon
                 name="Better Auth"
-                icon={<span className="text-3xl">🛡️</span>}
+                icon={
+                  <svg
+                    width="60"
+                    height="45"
+                    viewBox="0 0 60 45"
+                    fill="none"
+                    className="w-8 h-8"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M0 0H15V15H30V30H15V45H0V30V15V0ZM45 30V15H30V0H45H60V15V30V45H45H30V30H45Z"
+                      className="dark:fill-white"
+                    ></path>
+                  </svg>
+                }
               />
               <TechIcon
                 name="Cloudinary"
@@ -282,9 +312,7 @@ export default function Home() {
               />
               <TechIcon
                 name="OAuth"
-                icon={
-                  <FaKey className="w-10 h-10 text-amber-600 dark:text-amber-400" />
-                }
+                icon={<SiAuth0 className="w-10 h-10 text-white " />}
               />
             </div>
           </div>
