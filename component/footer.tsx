@@ -4,11 +4,10 @@ import {
   Mail,
   Twitter,
   Github,
-  MapPin,
-  Shield,
   HelpCircle,
-  Code,
-  Zap,
+  Shield,
+  MessageCircle,
+  Linkedin,
 } from "lucide-react";
 
 export default function Footer() {
@@ -23,22 +22,48 @@ export default function Footer() {
               Contact
             </h3>
             <div className="space-y-3">
-              <div className="flex items-start text-gray-600 dark:text-gray-300">
-                <Mail className="w-5 h-5 mr-2 mt-0.5 text-blue-600 dark:text-blue-400" />
-                <span>hello@betterauth.com</span>
-              </div>
-              <div className="flex items-start text-gray-600 dark:text-gray-300">
-                <Twitter className="w-5 h-5 mr-2 mt-0.5 text-blue-400 dark:text-blue-300" />
-                <span>@BetterAuth</span>
-              </div>
-              <div className="flex items-start text-gray-600 dark:text-gray-300">
-                <Github className="w-5 h-5 mr-2 mt-0.5 text-gray-800 dark:text-gray-200" />
-                <span>github.com/betterauth</span>
-              </div>
-              <div className="flex items-start text-gray-600 dark:text-gray-300">
-                <MapPin className="w-5 h-5 mr-2 mt-0.5 text-red-500 dark:text-red-400" />
-                <span>San Francisco, CA</span>
-              </div>
+              <ContactItem
+                icon={
+                  <Mail className="w-5 h-5 mr-2 mt-0.5 text-blue-600 dark:text-blue-400" />
+                }
+                label="hello@betterauth.com"
+                href="mailto:hello@betterauth.com"
+              />
+              <ContactItem
+                icon={
+                  <Twitter className="w-5 h-5 mr-2 mt-0.5 text-blue-400 dark:text-blue-300" />
+                }
+                label="@BetterAuth"
+                href="https://twitter.com/BetterAuth"
+              />
+              <ContactItem
+                icon={
+                  <Github className="w-5 h-5 mr-2 mt-0.5 text-gray-800 dark:text-gray-200" />
+                }
+                label="github.com/betterauth"
+                href="https://github.com/betterauth"
+              />
+              <ContactItem
+                icon={
+                  <MessageCircle className="w-5 h-5 mr-2 mt-0.5 text-sky-600 dark:text-sky-400" />
+                }
+                label="Telegram"
+                href="https://t.me/betterauth"
+              />
+              <ContactItem
+                icon={
+                  <MessageCircle className="w-5 h-5 mr-2 mt-0.5 text-indigo-600 dark:text-indigo-400" />
+                }
+                label="Discord"
+                href="https://discord.gg/betterauth"
+              />
+              <ContactItem
+                icon={
+                  <Linkedin className="w-5 h-5 mr-2 mt-0.5 text-blue-700 dark:text-blue-500" />
+                }
+                label="LinkedIn"
+                href="https://linkedin.com/company/betterauth"
+              />
             </div>
           </div>
 
@@ -62,19 +87,24 @@ export default function Footer() {
   );
 }
 
-function FooterLink({
+function ContactItem({
+  icon,
+  label,
   href,
-  children,
 }: {
+  icon: React.ReactNode;
+  label: string;
   href: string;
-  children: React.ReactNode;
 }) {
   return (
     <Link
       href={href}
-      className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 block"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-start text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
     >
-      {children}
+      {icon}
+      <span>{label}</span>
     </Link>
   );
 }
