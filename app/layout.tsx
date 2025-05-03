@@ -16,7 +16,24 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "betterAuth starter",
-  description: "get started in 60s",
+  description:
+    "Get started in 60s with betterAuth the Nuxt.js Full-Stack SaaS Starter Kit.",
+  openGraph: {
+    title: "betterAuth starter",
+    description:
+      "Get started in 60s with betterAuth the Nuxt.js Full-Stack SaaS Starter Kit.",
+    url: "https://better-auth-mongo-starter.vercel.app/",
+    siteName: "betterAuth starter",
+    images: [
+      {
+        url: "https://better-auth-mongo-starter.vercel.app/landing.png",
+        width: 1200,
+        height: 630,
+        alt: "betterAuth Starter Kit",
+      },
+    ],
+    type: "website",
+  },
 };
 
 export default function RootLayout({
