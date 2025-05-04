@@ -59,7 +59,7 @@ export default function Home() {
                 <span className="absolute inset-0 bg-gradient-to-r from-blue-700 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
               </Link>
               <Link
-                href="#contact"
+                href="https://github.com/fikertag/betterauth-mongodb-starter"
                 className="relative overflow-hidden px-8 py-3.5 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white font-medium shadow-lg hover:shadow-xl transition-all duration-300 group inline-block text-center border border-gray-200 dark:border-gray-700"
               >
                 <span className="relative z-10">Source code</span>
